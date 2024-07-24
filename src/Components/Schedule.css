@@ -1,0 +1,214 @@
+.bg-schedule {
+    background-image: url(../../public/bg-schedule.png);
+    position: relative;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    padding: 5%;
+    img {
+        position: absolute;
+        width: 15%;
+        right: 0px;
+        bottom: -5%;
+    }
+}
+
+.schedule-topic h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+.schedule-topic h2 {
+    color: white;
+    margin: 1.5%;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+
+
+.dropdown {
+    /* background-color: #2C2B3A; */
+    margin: 0 20%;
+    border-radius: 8px;
+    overflow: hidden;
+    border-bottom: 1px solid #682E8E;
+    margin-bottom: 8px;
+}
+
+@media (max-width:834px) {
+    .schedule-topic h1 {
+        margin: 3%;
+        font-size: 30px;
+    }
+    .schedule-topic h2 {
+        margin: 3%;
+        font-size: 24px;
+    }
+}
+
+@media (max-width:430px) {
+    .schedule-topic h1 {
+        margin: 2%;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .schedule-topic h2 {
+        margin: 2%;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .dropdown {
+        margin: 0 10%;
+    }
+}
+@media (max-width:390px) {
+    .schedule-topic h1 {
+        margin: 2%;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .schedule-topic h2 {
+        margin: 2%;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+@media (max-width:320px) {
+    .schedule-topic h1 {
+        margin: 2%;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .schedule-topic h2 {
+        margin: 2%;
+        font-size: 10px;
+        font-weight: 400;
+    }
+}
+
+.space-y-2 > :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.accordion-button {
+    /* background-color: #3B3754; */
+    color: white;
+    font-size: 30px;
+    padding: 16px;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+@media (max-width:834px) {
+    .accordion-button {
+        font-size: 24px;
+    }
+    .accordion-content {
+        font-size: 18px;
+    }
+    .accordion-button:after {
+        font-size: 20px;
+    }
+}
+@media (max-width:430px) {
+    .accordion-button {
+        font-size: 16px;
+    }
+    .accordion-content {
+        font-size: 14px;
+    }
+    .accordion-button:after {
+        font-size: 14px;
+    }
+}
+@media (max-width:320px) {
+    .accordion-button {
+        font-size: 12px;
+    }
+    .accordion-content {
+        font-size: 10px;
+    }
+    .accordion-button:after {
+        font-size: 10px;
+    }
+}
+
+.accordion-button:hover {
+    background-color: #BD2ADD4A;
+}
+
+.accordion-content {
+    background-color: #BD2ADD4A;
+    border-top: #E61C8D 1px solid;
+    border-bottom: #E61C8D 1px solid;
+    color: white;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden; /* Add this line */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Add this line */
+}
+
+.accordion-content.slide-down {
+    animation: slideDown 0.5s forwards;
+    padding: 16px;
+}
+
+.accordion-content.slide-up {
+    animation: slideUp 0.5s forwards;
+}
+
+.accordion-content.block {
+    display: block;
+}
+
+.accordion-content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.accordion-content li {
+    margin-bottom: 8px;
+    color: white;
+    list-style-position: inside;
+    text-align: left;
+    font-weight: 400;
+}
+
+.accordion-button:after {
+    content: '▲';
+    float: right;
+    transition: transform 0.5s ease;
+}
+
+.accordion-button.active:after {
+    transform: rotate(180deg);
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        max-height: 500px;
+        opacity: 1;
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}

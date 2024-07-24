@@ -1,0 +1,323 @@
+.bg-detail {
+    background: linear-gradient(180deg, rgba(90, 34, 128, 0.8) 0%, rgba(244, 116, 124, 0.8) 100%);
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-size: auto 100%;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-color: #69328F;
+
+    #telescope {
+        position: absolute;
+        width: 15%;
+        bottom: -12%;
+        z-index: 10;
+    }
+
+    #moon {
+        position: absolute;
+        width: 15%;
+        right: 5%;
+        top: 2%;
+        z-index: 10;
+    }
+}
+
+.detail-topic {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.register {
+    button {
+        background-color: white;
+        color: #F4410E;
+        height: 50px;
+        width: 250px;
+        border-radius: 10px;
+    }
+}
+
+.card-item .card-title {
+    z-index: 10;
+    font-weight: 700;
+    transition: transform 0.5s ease;
+}
+
+@media (max-width:430px) {
+    .register {
+        button {
+            font-size: 18px;
+        }
+    }
+
+    .topic {
+        padding-top: 3rem;
+    }
+
+    .bg-detail {
+        #telescope {
+            position: absolute;
+            width: 25%;
+            bottom: -5%;
+            z-index: 10;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .detail-topic {
+        h3 {
+            font-size: 12px;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    img {
+        position: absolute;
+        width: 70px;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.card-item {
+    height: 400px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.card-item .details {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+    align-items: center;
+    text-align: start;
+    border-radius: 10px;
+    font-weight: 300;
+}
+
+@media (min-width: 1001px) {
+    .card-item:hover {
+        width: 450px;
+        font-style: normal;
+    }
+
+    .card-item:hover .details {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .card-item:hover .card-title {
+        transform: translateY(-80px);
+    }
+
+}
+
+
+@media (min-width:500px) and (max-width:1000px) {
+    .card-item:hover {
+        width: 450px;
+        font-style: normal;
+    }
+
+    .card-item:hover .details {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .card-item .card-title {
+        z-index: 2;
+        transition: transform 0.5s ease;
+    }
+
+    .card-item:hover .card-title {
+        transform: translateY(-120px);
+    }
+
+    .detail-topic {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:430px) {
+    .card {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        justify-content: start;
+        margin-left: 30px;
+
+        img {
+            position: absolute;
+            opacity: 0.5;
+            width: 200px;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .card-item {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        height: 50vh;
+        display: flex;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .card-item .card-title {
+        z-index: 10;
+        font-weight: bold;
+        transition: transform 0.5s ease;
+    }
+
+    .card-item:hover .card-title {
+        transform: translateY(-120px);
+    }
+
+    .card-item .details {
+        visibility: visible;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .card-item .details {
+        visibility: visible;
+        opacity: 1;
+        font-style: normal;
+        z-index: 10;
+    }
+    .detail-topic {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width:320px) {
+    .register {
+        button {
+            font-size: 14px;
+            height: 35px;
+            width: 200px;
+            border-radius: 5px;
+        }
+    }
+    .card-item .card-title {
+        font-size: 16px;
+    }
+
+    .card-item .details {
+        font-size: 10px;
+    }
+
+    .card-item:hover .card-title {
+        transform: translateY(-60px);
+    }
+    .detail-topic {
+        font-size: 12px;
+    }
+}
+
+
+/* Gradient background for each card */
+.forum {
+    background: linear-gradient(to bottom, #BC29DD, #BF070B);
+}
+
+.marketplace {
+    background: linear-gradient(to bottom, #215E98, #76B789);
+}
+
+.businessMatching {
+    background: linear-gradient(to bottom, #BC29DD, #FA7796);
+}
+
+.primeMinisterAward {
+    background: linear-gradient(to bottom, #F43E0D, #D5C315);
+}
+
+.StartupThailandLeagueNationalPitching {
+    background: linear-gradient(to bottom, #408B27, #24749A);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px) ;
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0px)
+    }
+}
+
+/* Keyframes for fade-out animation */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Class for applying fade-in animation */
+.fade-up {
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+
+@keyframes sliceLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes sliceRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.slice-left {
+    animation: sliceLeft 1s forwards;
+}
+
+.slice-right {
+    animation: sliceRight 1s forwards;
+}

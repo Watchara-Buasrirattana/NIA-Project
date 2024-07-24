@@ -1,23 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import Banner from "./Components/Banner";
+import Detail from "./Components/Detail";
+import Schedule from './Components/Schedule';
+import Highlight from './Components/Highlight';
+import Footer from './Components/Footer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="Landing-page">
+      <header className="header">
+        <Navbar />
       </header>
+      <div className="banner-section">
+        <Banner />
+      </div>
+      <div className='detail-section' id='detail'>
+        <Detail />
+      </div>
+      <div className="schedule-section" id='schedule'>
+        <Schedule />
+      </div>
+      <div className="highlight-section" id='highlight'>
+        <Highlight />
+      </div>
+      <div className="footer-section">
+        <Footer />
+      </div>
     </div>
   );
 }

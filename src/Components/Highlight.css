@@ -1,0 +1,105 @@
+.bg-highlight {
+    background-image: url(../../public/bg-highlight.png);
+    width: 100%;
+    color: white;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    img {
+        width: 35px;
+    }
+}
+
+.row1 {
+    padding: 5%;
+    border-bottom-width: 2px;
+    border-color: #FFFFFF36;
+}
+
+@media (max-width:834px) {
+    .highlight {
+        width: 70%;
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}
+@media (max-width:430px) {
+    .highlight {
+        width: 80%;
+        h1 {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 14px;
+        }
+        p {
+            font-size: 8px;
+        }
+    }
+    #gap0 {
+        column-gap: 0px;
+    }
+}
+@media (max-width:320px) {
+    .highlight {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        width: 80%;
+        h1 {
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 10px;
+        }
+        p {
+            font-size: 7px;
+        }
+    }
+}
+
+@keyframes fadeDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px) ;
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0px)
+    }
+}
+
+.fade-down1 {
+    animation: fadeDown 0.25s ease-in-out forwards;
+}
+.fade-down2 {
+    animation: fadeDown 0.5s ease-in-out forwards;
+}
+.fade-down3 {
+    animation: fadeDown 0.75s ease-in-out forwards;
+}
+.fade-down4 {
+    animation: fadeDown 1s ease-in-out forwards;
+}
+.fade-down5 {
+    animation: fadeDown 1.25s ease-in-out forwards;
+}
+.fade-down6 {
+    animation: fadeDown 1.5s ease-in-out forwards;
+}
+.fade-down7 {
+    animation: fadeDown 1.75s ease-in-out forwards;
+}
